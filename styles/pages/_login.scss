@@ -1,0 +1,61 @@
+.login__page {
+    @apply font-avenia;
+     
+    .loading {
+        @apply fixed top-0 z-50 left-0 w-screen h-screen bg-white/90 flex items-center justify-center text-2xl;
+    }
+
+    .wrapper {
+        @apply p-5 min-h-screen flex items-center justify-center;
+
+        .logo_container {
+            @apply absolute top-5 left-5;
+        }
+
+        .main {
+            @apply grid grid-cols-2 max-w-[1200px] gap-10 mx-auto;
+
+            .mockup_container {
+                @apply relative w-[32rem];
+            }
+
+            .form__wrapper {
+                .heading {
+                    @apply font-avenia_bold text-primary text-4xl;
+                }
+
+                .paragraph {
+                    @apply mb-10;
+                }
+
+                form.form {
+                    @apply flex flex-col gap-5 max-w-[400px];
+
+                    .form_input {
+                        @apply p-3 rounded ring-1 ring-dark/50 outline-none;
+                    }
+
+                    .input_box {
+                        @apply rounded ring-1 ring-dark/40 text-sm flex items-center;
+
+                        input {
+                            @apply bg-transparent p-3 flex-grow outline-none;
+                        }
+
+                        button {
+                            @apply uppercase font-semibold text-secondary px-5 tracking-wider;
+                        }
+                    }
+                }
+
+                .forgot_password {
+                    @apply text-secondary font-semibold uppercase text-sm tracking-wider;
+                }
+
+                .submit_btn {
+                    @apply p-3 bg-secondary text-white rounded font-bold;
+                }
+            }
+        }
+    }
+}
