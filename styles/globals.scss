@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: Avenia;
+    src: url("/fonts/Avenir-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Avenia-Bold;
+    src: url("/fonts/Avenir-Bold.otf") format("opentype");
+}
+body {
+    @apply font-primary text-dark;
+}
+input {
+    @apply outline-none border-none;
+}
+
+@import "pages/login";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
