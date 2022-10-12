@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         e.preventDefault();
         setLoading(true);
         setTimeout(() => {
-            location.href = "/dashbaord";
+            location.href = "/dashboard";
         }, 2000)
     }
 
