@@ -16,6 +16,8 @@ input {
     @apply outline-none border-none;
 }
 
+@import "layouts/navbar";
+
 @import "pages/login";
 
 @tailwind base;

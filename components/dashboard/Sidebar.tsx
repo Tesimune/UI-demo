@@ -1,14 +1,14 @@
-import { Sidebar } from "flowbite-react";
-import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
-import  {HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards} from 'react-icons/hi';
 import { Badge, Bank, BriefCase, ChartBar, Chevron, ClipBoard, Coins, Galaxy, HandShake, Home, Loan, NairaSack, PiggyBank, Receipt, Scroll, Slider, UserCheck, Users, UsersAlt, UserSettings, UserTimes } from "../Icons";
 
 
-const DashboardSidebar: FunctionComponent = () => {
+const DashboardSidebar: FunctionComponent = ({show}: any) => {
+
+  if(!show) return null;
+
     return (
-      <aside className="shadow h-[calc(100vh_-_80px)] sticky top-0">
+      <aside className="shadow h-[calc(100vh_-_80px)] sticky top-[80px]">
           <ul className="py-5 h-full overflow-auto">
               <SidebarCollapse label="Switch Organization" icon={BriefCase} />
               <SidebarItem label="Dashboard" icon={Home} />

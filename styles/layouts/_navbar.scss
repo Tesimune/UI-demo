@@ -1,0 +1,38 @@
+nav.navbar {
+    @apply sticky top-0 h-[80px] shadow flex items-center md:gap-24 justify-between px-5 md:px-10 bg-white z-50;
+
+    .navmenu {
+        
+
+        &.active {
+            @apply flex;
+        }
+
+        form.search {
+            @apply flex rounded-lg h-10 overflow-hidden ring-2 ring-secondary;
+
+            input {
+                @apply px-4 bg-transparent outline-none flex-grow;
+            }
+
+            button {
+                @apply px-5 bg-secondary text-white text-xl;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+    nav.navbar {
+        
+        .navmenu {
+            @apply flex-grow flex items-center gap-10;
+
+            .link {
+                @apply flex items-center;
+            }
+        }
+    }
+}
