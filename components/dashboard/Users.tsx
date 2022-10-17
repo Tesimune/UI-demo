@@ -6,6 +6,7 @@ import { Dropdown } from 'flowbite-react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import formatDate from '@/utils/dateFormatter';
 
+  
 const Users:FunctionComponent = () => {
     const [count, setCount] = useState(10);
     const [users, setUsers] = useState([]);
@@ -36,55 +37,55 @@ const Users:FunctionComponent = () => {
 
     return (
 
-        <div className="relative mt-10">
-            <table className="w-full table-auto text-sm text-left text-gray-500 dark:text-gray-400">
+        <div className="relative mt-10 w-full overflow-x-auto">
+            <table className="w-full overflow-x-auto table-auto text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th scope='col' className='py-3 px-6'>
+                        <th scope='col' className='py-3 px-3'>
                             <FilterForm label='Organization' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             <FilterForm label='Username' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             <FilterForm label='Email' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             <FilterForm label='phone number' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             <FilterForm label='date joined' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             <FilterForm label='status' />
                         </th>
-                        <th scope="col" className="py-3 px-6">
+                        <th scope="col" className="py-3 px-3">
                             
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     {users.map(user => (
-                        <tr key={user.email} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <tr key={user.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" className="py-4 px-3 font-medium text-gray-900 dark:text-white">
                                 <Link href={"/users/"+user.userName} className="hover:underline">{user.orgName}</Link>
                             </th>
-                            <td className="py-4 px-6">
+                            <td className="py-4 px-3">
                                 {user.userName}
                             </td>
-                            <td className="py-4 px-6">
+                            <td className="py-4 px-3">
                                 {user.email}
                             </td>
-                            <td className="py-4 px-6 whitespace-nowrap">
+                            <td className="py-4 px-3">
                                 {user.phoneNumber}
                             </td>
-                            <td className="py-4 px-6 whitespace-nowrap">
+                            <td className="py-4 px-3">
                                 {formatDate(user.createdAt)}
                             </td>
-                            <td className="py-4 px-6">
+                            <td className="py-4 px-3">
                                 <span className='px-3 py-2 text-xs rounded-full bg-warning/10 text-warning'>Pending</span>
                             </td>
-                            <td className="py-4 px-6 relative">
+                            <td className="py-4 px-3 relative">
                                 <Menu userName={user.userName} />
                             </td>
                         </tr>

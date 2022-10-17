@@ -34,29 +34,29 @@ const Home: NextPage = () => {
                 <AppLogo />
               </div>
 
-              <div className="main">
-                  
-                  <div className="mockup_container relative w-12">
-                      <Image src='/images/mockup.svg' alt="MOCKUP IMAGE" layout='fill' />
-                  </div>
+                <div className="main">
+                    
+                    <div className="mockup_container relative w-12">
+                        <Image src='/images/mockup.svg' alt="MOCKUP IMAGE" layout='fill' />
+                    </div>
 
                     <div className="form__wrapper">
-                      <h1 className="heading">Welcome!</h1>
-                      <p className="paragraph">Enter Login Details</p>
+                        <h1 className="heading">Welcome!</h1>
+                        <p className="paragraph">Enter Login Details</p>
 
-                      <form className="form" onSubmit={handleSubmit}>
-                          <input type="text" placeholder="Email Address" className="form_input" />
-                          <div className="input_box">
-                              <input type={show ? "text" : "password"} placeholder="Password" />
-                              <button type="button" onClick={() => setShow(!show)}>
-                                  {show ? "Hide" : "Show"}
-                              </button>
-                          </div>
-                          <a href="#" className="forgot_password">Forgot password?</a>
-                          <button type="submit" className="submit_btn">Log in</button>
-                      </form>
-                  </div>
-              </div>
+                        <form className="form" onSubmit={handleSubmit}>
+                            <input type="text" placeholder="Email Address" className="form_input" />
+                            <div className="input_box">
+                                <input type={show ? "text" : "password"} placeholder="Password" />
+                                <button type="button" onClick={() => setShow(!show)}>
+                                    {show ? "Hide" : "Show"}
+                                </button>
+                            </div>
+                            <a href="#" className="forgot_password">Forgot password?</a>
+                            <button type="submit" className="submit_btn">Log in</button>
+                        </form>
+                    </div>
+                </div>
           </div>
       </div>
     )

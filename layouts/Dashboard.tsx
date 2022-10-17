@@ -11,17 +11,17 @@ const Dashboard = ({children}: any) => {
     const [expand, setExpand] = useState(true);
 
     return (
-        <section className="">
+        <div className="grid justify-center">
 
             <Navbar expand={expand} onOpen={() => setOpen(!open)} />
 
-            <section className="md:grid grid-cols-[300px,auto]">
+            <section className="grid justify-center grid-cols-1 md:grid-cols-[300px,auto]">
                 <DashboardSidebar show={open} />
-                <main className='p-5 md:p-10'>
+                <main className='p-3 md:p-5'>
                     {children}
                 </main>
             </section>
-        </section>
+        </div>
     )
 }
 

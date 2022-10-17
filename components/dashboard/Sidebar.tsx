@@ -8,7 +8,7 @@ const DashboardSidebar: FunctionComponent = ({show}: any) => {
   if(!show) return null;
 
     return (
-      <aside className="shadow h-[calc(100vh_-_80px)] sticky top-[80px]">
+      <aside className="hidden md:block shadow h-[calc(100vh_-_80px)] sticky top-[80px]">
           <ul className="py-5 h-full overflow-auto">
               <SidebarCollapse label="Switch Organization" icon={BriefCase} />
               <SidebarItem label="Dashboard" icon={Home} />
@@ -50,7 +50,7 @@ const DashboardSidebar: FunctionComponent = ({show}: any) => {
 const SidebarItem = ({label, icon:Icon}: any) => {
   return(
     <li>
-      <a href="" className="flex items-center gap-3 text-lg p-5 py-3 hover:bg-secondary/10 hover:border-l-4 hover:border-l-primary">
+      <a href="" className="flex items-center gap-3 text-md p-5 py-3 hover:bg-secondary/10 hover:border-l-4 hover:border-l-primary">
         <Icon />
         <span>{label}</span>
       </a>
@@ -70,7 +70,7 @@ const SidebarItems = ({children, label}: any) => {
 const SidebarCollapse = ({label, icon: Icon}: any ) => {
   return (
    <li>
-      <a href="" className="flex items-center gap-3 text-lg p-5 py-3 hover:bg-secondary/10 hover:border-l-4 hover:border-l-primary">
+      <a href="" className="flex items-center gap-3 text-md p-5 py-3 hover:bg-secondary/10 hover:border-l-4 hover:border-l-primary">
        { Icon && <Icon />}
         <span className="whitespace-nowrap">{label}</span>
         <Chevron />

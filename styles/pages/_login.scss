@@ -13,15 +13,16 @@
         }
 
         .main {
-            @apply grid grid-cols-2 max-w-[1200px] gap-10 mx-auto;
+            @apply grid md:grid-cols-2 max-w-[1200px] gap-10 mx-auto;
 
             .mockup_container {
-                @apply relative w-[32rem];
+                @apply relative md:w-[32rem];
             }
 
             .form__wrapper {
+                @apply bg-white;
                 .heading {
-                    @apply font-avenia_bold text-primary text-4xl;
+                    @apply font-avenia_bold text-primary md:text-4xl;
                 }
 
                 .paragraph {
@@ -29,7 +30,7 @@
                 }
 
                 form.form {
-                    @apply flex flex-col gap-5 max-w-[400px];
+                    @apply flex flex-col gap-5 md:max-w-[400px];
 
                     .form_input {
                         @apply p-3 rounded ring-1 ring-dark/50 outline-none;
